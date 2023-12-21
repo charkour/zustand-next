@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "size": "pnpm --filter size size",
+    "test": "pnpm --filter tests test",
+    "test:ci": "pnpm --filter tests test:ci"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +19,8 @@
     "zustand": "4.4.7"
   },
   "devDependencies": {
+    "@types/react": "^18",
+    "react": "^18",
     "tsup": "8.0.1"
   }
 }
